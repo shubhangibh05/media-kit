@@ -538,6 +538,47 @@
   }
   @media (max-width:800px){.yt-panel{grid-template-columns:1fr; padding:40px 26px; text-align:left;}}
 
+  /* ================= PAGE NETWORK ================= */
+  .pages-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+  }
+  .page-card{
+    border:1px solid var(--line);
+    padding:30px 28px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    transition:border-color 0.35s ease, transform 0.35s ease;
+  }
+  .page-card:hover{border-color:var(--gold); transform:translateY(-3px);}
+  .page-card.primary{border-color:var(--gold); box-shadow:0 0 0 1px var(--gold);}
+  .page-card .role{
+    font-family:'Cinzel',serif;
+    font-size:0.6rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--gold-dim);
+  }
+  .page-card.primary .role{color:var(--gold);}
+  .page-card .handle{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.5rem;
+    color:var(--chocolate);
+  }
+  .page-card p{font-size:0.9rem; line-height:1.7; color:var(--chocolate-soft);}
+  .page-card .go{
+    margin-top:auto;
+    font-family:'Cinzel',serif;
+    font-size:0.6rem;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    color:var(--gold-dim);
+  }
+  .page-card:hover .go{color:var(--gold);}
+  @media (max-width:760px){ .pages-grid{grid-template-columns:1fr;} }
+
   /* ================= FOOTER / CONTACT ================= */
   .contact{
     text-align:center;
@@ -580,6 +621,7 @@
     <a href="#work">Campaigns</a>
     <a href="#storytelling">Storytelling</a>
     <a href="#youtube">YouTube</a>
+    <a href="#pages">Pages</a>
     <a href="#contact">Collaborate</a>
   </div>
 </nav>
@@ -590,7 +632,7 @@
     <div class="hero-copy">
       <div class="eyebrow">Beauty &amp; Lifestyle Creator — Delhi NCR</div>
       <h1 class="hero-name">Shubhangi<br><i>Beauty Full Soul</i></h1>
-      <div class="hero-handle"><img class="avatar" src="resources/profile-pic.jpg" alt="Shubhangi profile picture"> @beauty_full_soul05 on Instagram</div>
+      <div class="hero-handle"><img class="avatar" src="resources/profile-pic.jpg" alt="Shubhangi profile picture"> @beauty_full_soul05 on Instagram <span style="color:var(--gold-dim); font-size:0.8rem; letter-spacing:0.1em;">+ 3 sister pages</span></div>
       <p class="hero-tagline">Hinglish beauty storytelling for a generation that reads ingredient lists — from drugstore heroes to the luxury vanity edit. Real skin, real voice, real conversions.</p>
       <div class="hero-cta">
         <a class="btn filled" href="https://www.instagram.com/beauty_full_soul05" target="_blank" rel="noopener">View Instagram</a>
@@ -1114,6 +1156,51 @@
   </div>
 </section>
 
+<!-- ================= PAGE NETWORK ================= -->
+<section id="pages">
+  <div class="container reveal">
+    <div class="section-head">
+      <div class="chapter-num">VII</div>
+      <div>
+        <h2>The Page Network</h2>
+        <div class="section-kicker">One voice, four Instagram homes</div>
+      </div>
+      <div class="rule"></div>
+    </div>
+
+    <div class="work-intro" style="border-color:var(--line);">
+      <p style="color:var(--chocolate-soft);">Campaigns run across a small family of pages. <b>@beauty_full_soul05</b> is the primary handle and the default home for brand partnerships — the rest extend reach into dedicated skincare, makeup, and archive audiences, and can be bundled into a single collaboration.</p>
+    </div>
+
+    <div class="pages-grid">
+      <a class="page-card primary" href="https://www.instagram.com/beauty_full_soul05" target="_blank" rel="noopener">
+        <div class="role">Primary Page</div>
+        <div class="handle">@beauty_full_soul05</div>
+        <p>The flagship handle — the audience, the insights, and the campaign work featured throughout this kit.</p>
+        <div class="go">Visit on Instagram &rarr;</div>
+      </a>
+      <a class="page-card" href="https://www.instagram.com/d.shade.archive" target="_blank" rel="noopener">
+        <div class="role">Freshest Page</div>
+        <div class="handle">@d.shade.archive</div>
+        <p>The newest addition and current home of the latest reel — a shade-led archive of edits and product stories.</p>
+        <div class="go">Visit on Instagram &rarr;</div>
+      </a>
+      <a class="page-card" href="https://www.instagram.com/pristine.glow_sho" target="_blank" rel="noopener">
+        <div class="role">Recently Launched</div>
+        <div class="handle">@pristine.glow_sho</div>
+        <p>A skincare-first page built around glow routines, honest ingredient talk, and repeat-purchase products.</p>
+        <div class="go">Visit on Instagram &rarr;</div>
+      </a>
+      <a class="page-card" href="https://www.instagram.com/soulcreations.beauty.skin.mkup" target="_blank" rel="noopener">
+        <div class="role">Recently Launched</div>
+        <div class="handle">@soulcreations.beauty.skin.mkup</div>
+        <p>Beauty, skin, and makeup creations — the space for looks, application detail, and tutorial-style formats.</p>
+        <div class="go">Visit on Instagram &rarr;</div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="dark contact">
   <div class="container reveal">
@@ -1131,6 +1218,7 @@
 <footer>
   <div>© 2026 Shubhangi — Beauty Full Soul. Media Kit.</div>
   <div><a href="https://www.instagram.com/beauty_full_soul05" target="_blank" rel="noopener">instagram.com/beauty_full_soul05</a> &nbsp;·&nbsp; <a href="https://www.youtube.com/@creative_er05" target="_blank" rel="noopener">youtube.com/@creative_er05</a> &nbsp;·&nbsp; <a href="https://wa.me/919266321465" target="_blank" rel="noopener">WhatsApp +91 92663 21465</a></div>
+  <div style="margin-top:10px;">Sister pages: <a href="https://www.instagram.com/d.shade.archive" target="_blank" rel="noopener">@d.shade.archive</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/pristine.glow_sho" target="_blank" rel="noopener">@pristine.glow_sho</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/soulcreations.beauty.skin.mkup" target="_blank" rel="noopener">@soulcreations.beauty.skin.mkup</a></div>
 </footer>
 
 <script>
