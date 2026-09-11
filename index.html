@@ -437,7 +437,11 @@
   }
   .latest-ribbon::before{content:'★';}
 
-  .video-player-frame{
+  /* ---------- inline player box (single source of truth) ----------
+     Every post player -- local <video> and Instagram embeds alike -- uses this
+     one geometry: 340px frame, 10px padding, media 320px wide locked to 9/16. */
+  .video-player-frame,
+  .ig-embed-frame{
     position:relative;
     border:1px solid var(--gold-bright);
     box-shadow:0 0 0 1px var(--gold-bright), 0 20px 45px rgba(198,161,91,0.28);
@@ -445,12 +449,17 @@
     max-width:340px;
     background:var(--chocolate-deep);
   }
-  @media (max-width:900px){ .video-player-frame{max-width:100%;} }
-  .video-player-frame video{
+  @media (max-width:900px){
+    .video-player-frame,
+    .ig-embed-frame{max-width:100%;}
+  }
+  .video-player-frame video,
+  .ig-embed-frame iframe{
     width:100%;
     display:block;
     aspect-ratio:9/16;
     object-fit:cover;
+    border:0;
     background:#000;
   }
   .video-player-label{
@@ -462,23 +471,22 @@
   .video-player-label span{font-size:0.72rem; color:var(--beige);}
 
 
-  /* ---------- native Instagram embed (plays in-page) ---------- */
-  .ig-embed-frame{
-    position:relative;
-    border:1px solid var(--gold-bright);
-    box-shadow:0 0 0 1px var(--gold-bright), 0 20px 45px rgba(198,161,91,0.28);
-    padding:10px;
-    max-width:340px;
-    background:var(--chocolate-deep);
-  }
+  /* ---------- native Instagram embed (plays in-page) ----------
+     embed.js replaces the blockquote with its own iframe and sets inline
+     width/height/min-width, so those three are forced back to the box above. */
   .ig-embed-frame iframe{
-    width:100%;
-    height:620px;
-    display:block;
-    border:0;
-    background:#000;
+    min-width:0 !important;
+    max-width:none !important;
+    width:100% !important;
+    height:auto !important;
+    margin:0 !important;
   }
-  @media (max-width:900px){ .ig-embed-frame{max-width:100%;} }
+  .ig-blockquote-frame{overflow:hidden;}
+  .ig-blockquote-frame .instagram-media{
+    min-width:0 !important;
+    width:100% !important;
+    margin:0 !important;
+  }
 
 
   /* ---------- extra small screens ---------- */
@@ -512,10 +520,21 @@
   }
   .yt-panel h3{font-size:2.2rem; color:var(--chocolate); margin-bottom:16px;}
   .yt-panel p{color:var(--chocolate-soft); line-height:1.85; font-size:0.98rem; margin-bottom:26px;}
-  .yt-glyph{
-    display:flex; align-items:center; justify-content:center;
+  /* channel uploads player: same gold frame as the post players, 16/9 */
+  .yt-embed-frame{
+    position:relative;
+    border:1px solid var(--gold-bright);
+    box-shadow:0 0 0 1px var(--gold-bright), 0 20px 45px rgba(198,161,91,0.28);
+    padding:10px;
+    background:var(--chocolate-deep);
   }
-  .yt-glyph svg{width:120px; height:120px;}
+  .yt-embed-frame iframe{
+    width:100%;
+    display:block;
+    aspect-ratio:16/9;
+    border:0;
+    background:#000;
+  }
   @media (max-width:800px){.yt-panel{grid-template-columns:1fr; padding:40px 26px; text-align:left;}}
 
   /* ================= FOOTER / CONTACT ================= */
@@ -578,7 +597,7 @@
       </div>
     </div>
     <div class="hero-image-wrap">
-      <img src="resources/hero-portrait.jpg" alt="Shubhangi, creator of @beauty_full_soul05">
+      <img src="resources/pic.jpeg" alt="Shubhangi, creator of @beauty_full_soul05">
     </div>
   </div>
   <div class="hero-seal"><div class="seal"><span>BFS</span></div></div>
@@ -755,8 +774,12 @@
         </div>
         <div class="embed-frame">
           <div>
-            <div class="ig-embed-frame">
-              <iframe src="https://www.instagram.com/p/DYbDoU3jxRv/embed/" title="Gucci Beauty, via Brandmall post on Instagram" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen scrolling="no" loading="lazy"></iframe>
+            <div class="ig-embed-frame ig-blockquote-frame">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYbDoU3jxRv/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:0; max-width:540px; min-width:0; padding:0; width:100%;">
+                <div style="padding:16px;">
+                  <a href="https://www.instagram.com/p/DYbDoU3jxRv/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank" rel="noopener">View this post on Instagram</a>
+                </div>
+              </blockquote>
             </div>
             <div style="text-align:center; margin-top:12px;">
               <a href="https://www.instagram.com/p/DYbDoU3jxRv/" target="_blank" rel="noopener" style="font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold-bright);">View Original Post on Instagram →</a>
@@ -777,8 +800,12 @@
         </div>
         <div class="embed-frame">
           <div>
-            <div class="ig-embed-frame">
-              <iframe src="https://www.instagram.com/p/DOofIFkkt0F/embed/" title="Belleza Jewels post on Instagram" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen scrolling="no" loading="lazy"></iframe>
+            <div class="ig-embed-frame ig-blockquote-frame">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DOofIFkkt0F/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:0; max-width:540px; min-width:0; padding:0; width:100%;">
+                <div style="padding:16px;">
+                  <a href="https://www.instagram.com/p/DOofIFkkt0F/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank" rel="noopener">View this post on Instagram</a>
+                </div>
+              </blockquote>
             </div>
             <div style="text-align:center; margin-top:12px;">
               <a href="https://www.instagram.com/p/DOofIFkkt0F/" target="_blank" rel="noopener" style="font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold-bright);">View Original Post on Instagram →</a>
@@ -1053,12 +1080,8 @@
         <p style="color:var(--beige);">The extended-format counterpart to the Instagram feed — longer tutorials, deeper reviews, and behind-the-scenes creative process for the audience that wants more than sixty seconds.</p>
         <a class="btn filled" href="https://youtube.com/@creative_er05" target="_blank" rel="noopener">Visit the Channel</a>
       </div>
-      <div class="yt-glyph">
-        <svg viewBox="0 0 120 120" fill="none">
-          <circle cx="60" cy="60" r="58" stroke="#C6A15B" stroke-width="1"/>
-          <circle cx="60" cy="60" r="46" stroke="#C6A15B" stroke-width="1" opacity="0.5"/>
-          <path d="M50 42 L82 60 L50 78 Z" fill="#E7C783"/>
-        </svg>
+      <div class="yt-embed-frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=UU3uTNvwIXmPGVCh3nhO2BCA&amp;rel=0" title="Latest uploads from @cReative_er05 on YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
   </div>
@@ -1297,6 +1320,8 @@
   load();
 })();
 </script>
+
+<script async src="https://www.instagram.com/embed.js"></script>
 
 </body>
 </html>
