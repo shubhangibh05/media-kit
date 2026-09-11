@@ -8,22 +8,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --chocolate:#2A1810;
-    --chocolate-deep:#1B0F09;
-    --chocolate-soft:#4A2F1F;
-    --beige:#D9C6A0;
-    --cream:#F6EEDF;
-    --cream-soft:#FBF6EC;
-    --gold:#C6A15B;
-    --gold-bright:#E7C783;
-    --gold-dim:#8A6E3B;
-    --ink:#1B140D;
-    --white:#FFFDF8;
-    --line: rgba(198,161,91,0.35);
+    --chocolate:#210E05;
+    --chocolate-deep:#110400;
+    --chocolate-soft:#452715;
+    --beige:#E2CDA3;
+    --cream:#FFF9E8;
+    --cream-soft:#FFFFF7;
+    --gold:#CDA457;
+    --gold-bright:#F1CE83;
+    --gold-dim:#8B6C34;
+    --ink:#110901;
+    --white:#FFFFFF;
+    --line: rgba(205,164,87,0.42);
   }
 
   *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%; font-size:112.5%;}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%; font-size:118.1%;}
   body{overflow-x:hidden;}
   img,svg{max-width:100%; display:block;}
   .container{width:100%;}
@@ -105,7 +105,7 @@
   /* ================= NAV ================= */
   .nav{
     position:fixed; top:0; left:0; right:0; z-index:50;
-    background:rgba(27,15,9,0.92);
+    background:rgba(17,4,0,0.92);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
     padding:16px 6vw;
@@ -143,7 +143,7 @@
   .hero{
     min-height:89vh;
     background:
-      linear-gradient(180deg, rgba(27,15,9,0.15) 0%, rgba(27,15,9,0.75) 78%, var(--chocolate-deep) 100%),
+      linear-gradient(180deg, rgba(17,4,0,0.15) 0%, rgba(17,4,0,0.75) 78%, var(--chocolate-deep) 100%),
       var(--chocolate);
     position:relative;
     display:flex;
@@ -166,7 +166,7 @@
   .hero-copy .eyebrow{color:var(--gold-bright); margin-bottom:18px; display:flex; align-items:center; gap:14px;}
   .hero-copy .eyebrow::before{content:''; width:34px; height:1px; background:var(--gold);}
   .hero-name{
-    font-size:clamp(3rem, 7vw, 5.6rem);
+    font-size:clamp(3.15rem, 7.35vw, 5.88rem);
     line-height:0.98;
     color:var(--white);
   }
@@ -195,7 +195,7 @@
     font-size:1.02rem;
     line-height:1.75;
     font-weight:300;
-    color:rgba(246,238,223,0.82);
+    color:rgba(255,249,232,0.82);
   }
   .hero-cta{
     margin-top:30px;
@@ -228,12 +228,12 @@
   .hero-image-wrap::after{
     content:'';
     position:absolute; inset:0;
-    background:linear-gradient(90deg, var(--chocolate) 0%, rgba(42,24,16,0) 22%, rgba(42,24,16,0) 100%);
+    background:linear-gradient(90deg, var(--chocolate) 0%, rgba(33,14,5,0) 22%, rgba(33,14,5,0) 100%);
   }
   .hero-image-wrap::before{
     content:'';
     position:absolute; inset:0;
-    background:linear-gradient(0deg, rgba(27,15,9,0.55) 0%, rgba(27,15,9,0) 40%);
+    background:linear-gradient(0deg, rgba(17,4,0,0.55) 0%, rgba(17,4,0,0) 40%);
     z-index:2;
   }
   @media (max-width:860px){
@@ -254,7 +254,7 @@
     margin-bottom:56px;
   }
   .section-head h2{
-    font-size:clamp(1.9rem,3.4vw,2.7rem);
+    font-size:clamp(2rem,3.57vw,2.84rem);
     color:var(--chocolate);
   }
   .section-head .rule{flex:1; height:1px; background:var(--line);}
@@ -374,7 +374,7 @@
 
   .bar-row{margin-bottom:16px;}
   .bar-row .top{display:flex; justify-content:space-between; font-size:0.85rem; color:var(--chocolate-soft); margin-bottom:6px;}
-  .bar-track{height:6px; background:rgba(74,47,31,0.12); position:relative;}
+  .bar-track{height:6px; background:rgba(69,39,21,0.12); position:relative;}
   .bar-fill{height:100%; background:linear-gradient(90deg, var(--gold-dim), var(--gold-bright));}
 
   .country-list{margin-top:34px;}
@@ -419,7 +419,7 @@
   /* ---------- featured / latest highlight ---------- */
   .work-row.featured{
     position:relative;
-    background:linear-gradient(90deg, rgba(230,199,131,0.07), transparent 60%);
+    background:linear-gradient(90deg, rgba(240,206,131,0.07), transparent 60%);
     border-left:2px solid var(--gold-bright);
     padding-left:24px;
     margin-left:-26px;
@@ -433,7 +433,7 @@
     background:linear-gradient(100deg, var(--gold-bright), var(--gold));
     padding:7px 14px;
     margin-bottom:14px;
-    box-shadow:0 4px 16px rgba(198,161,91,0.35);
+    box-shadow:0 4px 16px rgba(205,164,87,0.42);
   }
   .latest-ribbon::before{content:'★';}
 
@@ -444,7 +444,7 @@
   .ig-embed-frame{
     position:relative;
     border:1px solid var(--gold-bright);
-    box-shadow:0 0 0 1px var(--gold-bright), 0 20px 45px rgba(198,161,91,0.28);
+    box-shadow:0 0 0 1px var(--gold-bright), 0 20px 45px rgba(205,164,87,0.28);
     padding:10px;
     max-width:340px;
     background:var(--chocolate-deep);
@@ -491,7 +491,7 @@
 
   /* ---------- extra small screens ---------- */
   @media (max-width:600px){
-    html{font-size:106%;}
+    html{font-size:111.3%;}
     section{padding:76px 0;}
     .stat-cell{padding:26px 18px;}
     .stat-cell .num{font-size:2.1rem;}
@@ -525,7 +525,7 @@
   .yt-embed-frame{
     position:relative;
     border:1px solid var(--gold-bright);
-    box-shadow:0 0 0 1px var(--gold-bright), 0 20px 45px rgba(198,161,91,0.28);
+    box-shadow:0 0 0 1px var(--gold-bright), 0 20px 45px rgba(205,164,87,0.28);
     padding:10px;
     background:var(--chocolate-deep);
   }
@@ -544,7 +544,7 @@
     padding-bottom:140px;
   }
   .contact h2{
-    font-size:clamp(2.2rem,5vw,3.6rem);
+    font-size:clamp(2.31rem,5.25vw,3.78rem);
     color:var(--white);
     max-width:760px;
     margin:0 auto 30px;
@@ -763,8 +763,35 @@
 
     <div class="work-sequence">
 
+      <div class="work-row featured">
+        <div class="chapter-num" style="border-color:var(--gold-bright); color:var(--gold-bright);">01</div>
+        <div class="work-meta">
+          <div class="latest-ribbon">Latest Reel</div>
+          <div class="tag">Skincare</div>
+          <h3>Pilgrim 10% Vitamin C Serum</h3>
+          <p>Skincare-led reel breaking down Pilgrim's 10% Vitamin C serum in an honest, routine-first format.</p>
+          <div class="video-player-label" style="max-width:340px; margin-top:16px;">
+            <b>Playing Inline</b><span>Instagram embed</span>
+          </div>
+        </div>
+        <div class="embed-frame">
+          <div>
+            <div class="ig-embed-frame ig-blockquote-frame">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Dc6Ktazv_Id/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:0; max-width:540px; min-width:0; padding:0; width:100%;">
+                <div style="padding:16px;">
+                  <a href="https://www.instagram.com/reel/Dc6Ktazv_Id/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank" rel="noopener">View this post on Instagram</a>
+                </div>
+              </blockquote>
+            </div>
+            <div style="text-align:center; margin-top:12px;">
+              <a href="https://www.instagram.com/reel/Dc6Ktazv_Id/" target="_blank" rel="noopener" style="font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold-bright);">View Original Reel on Instagram &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="work-row">
-        <div class="chapter-num">01</div>
+        <div class="chapter-num">02</div>
         <div class="work-meta">
           <div class="tag">Luxury Haul</div>
           <h3>Gucci Beauty, via Brandmall</h3>
@@ -790,7 +817,7 @@
       </div>
 
       <div class="work-row">
-        <div class="chapter-num">02</div>
+        <div class="chapter-num">03</div>
         <div class="work-meta">
           <div class="tag">Fine Jewelry</div>
           <h3>Belleza Jewels</h3>
@@ -816,7 +843,7 @@
       </div>
 
       <div class="work-row">
-        <div class="chapter-num">03</div>
+        <div class="chapter-num">04</div>
         <div class="work-meta">
           <div class="tag">PR Feature</div>
           <h3>Youtaas Jewelry</h3>
@@ -838,7 +865,7 @@
       </div>
 
       <div class="work-row">
-        <div class="chapter-num">04</div>
+        <div class="chapter-num">05</div>
         <div class="work-meta">
           <div class="tag">Unboxing</div>
           <h3>Brandmall Delhi</h3>
@@ -860,7 +887,7 @@
       </div>
 
       <div class="work-row">
-        <div class="chapter-num">05</div>
+        <div class="chapter-num">06</div>
         <div class="work-meta">
           <div class="tag">Accessories</div>
           <h3>Bhastra Bags</h3>
@@ -881,10 +908,9 @@
         </div>
       </div>
 
-      <div class="work-row featured">
-        <div class="chapter-num" style="border-color:var(--gold-bright); color:var(--gold-bright);">06</div>
+      <div class="work-row">
+        <div class="chapter-num">07</div>
         <div class="work-meta">
-          <div class="latest-ribbon">Latest Reel</div>
           <div class="tag">Drugstore Darling</div>
           <h3>Pilgrim Vitamin C Moisturizer</h3>
           <p>A "genuine restock" narrative for Pilgrim's Vitamin C Brightening Moisturizer — the format built to convert skeptics into buyers. The freshest campaign in the current rotation.</p>
@@ -1074,7 +1100,7 @@
       <div class="rule"></div>
     </div>
 
-    <div class="yt-panel" style="background:rgba(255,253,248,0.03);">
+    <div class="yt-panel" style="background:rgba(255,255,254,0.03);">
       <div>
         <div class="eyebrow" style="color:var(--gold-bright); margin-bottom:14px;">@creative_er05</div>
         <h3 style="color:var(--white);">Creative Er</h3>
