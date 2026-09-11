@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shubhangi — @beauty_full_soul05 | Media Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --chocolate:#2A1810;
+    --chocolate-deep:#1B0F09;
+    --chocolate-soft:#4A2F1F;
+    --beige:#D9C6A0;
+    --cream:#F6EEDF;
+    --cream-soft:#FBF6EC;
+    --gold:#C6A15B;
+    --gold-bright:#E7C783;
+    --gold-dim:#8A6E3B;
+    --ink:#1B140D;
+    --white:#FFFDF8;
+    --line: rgba(198,161,91,0.35);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%;}
+  body{overflow-x:hidden;}
+  img,svg{max-width:100%; display:block;}
+  .container{width:100%;}
+
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Jost', sans-serif;
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  ::selection{background:var(--gold); color:var(--chocolate-deep);}
+
+  h1,h2,h3,h4{font-family:'Cormorant Garamond', serif; font-weight:500; letter-spacing:0.01em;}
+
+  .eyebrow{
+    font-family:'Cinzel', serif;
+    font-size:0.68rem;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    color:var(--gold-dim);
+  }
+
+  a{color:inherit; text-decoration:none;}
+
+  .container{
+    max-width:1140px;
+    margin:0 auto;
+    padding:0 6vw;
+  }
+
+  /* ---------- reveal on scroll ---------- */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity 0.9s ease, transform 0.9s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ---------- signature monogram seal ---------- */
+  .seal{
+    width:64px; height:64px;
+    border-radius:50%;
+    border:1px solid var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    flex-shrink:0;
+  }
+  .seal::before{
+    content:'';
+    position:absolute;
+    inset:6px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    opacity:0.5;
+  }
+  .seal span{
+    font-family:'Cinzel', serif;
+    font-size:0.85rem;
+    letter-spacing:0.06em;
+    color:var(--gold-bright);
+  }
+
+  .chapter-num{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:1rem;
+    color:var(--gold);
+    border:1px solid var(--gold);
+    border-radius:50%;
+    width:38px; height:38px;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+
+  /* ================= NAV ================= */
+  .nav{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    background:rgba(27,15,9,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    padding:16px 6vw;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-brand{
+    font-family:'Cinzel', serif;
+    color:var(--cream);
+    font-size:0.8rem;
+    letter-spacing:0.22em;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .nav-brand em{font-style:normal; color:var(--gold-bright);}
+  .nav-avatar{
+    width:30px; height:30px;
+    border-radius:50%;
+    object-fit:cover;
+    border:1px solid var(--gold);
+  }
+  .nav-links{display:flex; gap:28px;}
+  .nav-links a{
+    color:var(--beige);
+    font-size:0.72rem;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    font-family:'Jost',sans-serif;
+    transition:color 0.3s ease;
+  }
+  .nav-links a:hover{color:var(--gold-bright);}
+  @media (max-width:720px){ .nav-links{display:none;} }
+
+  /* ================= HERO ================= */
+  .hero{
+    min-height:100vh;
+    background:
+      linear-gradient(180deg, rgba(27,15,9,0.15) 0%, rgba(27,15,9,0.75) 78%, var(--chocolate-deep) 100%),
+      var(--chocolate);
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    padding:0;
+  }
+  .hero-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    align-items:stretch;
+    min-height:100vh;
+  }
+  .hero-copy{
+    position:relative; z-index:3;
+    padding:min(14vw,150px) 6vw 70px;
+    display:flex; flex-direction:column; justify-content:flex-end;
+    color:var(--cream-soft);
+  }
+  .hero-copy .eyebrow{color:var(--gold-bright); margin-bottom:22px; display:flex; align-items:center; gap:14px;}
+  .hero-copy .eyebrow::before{content:''; width:34px; height:1px; background:var(--gold);}
+  .hero-name{
+    font-size:clamp(3rem, 7vw, 5.6rem);
+    line-height:0.98;
+    color:var(--white);
+  }
+  .hero-name i{color:var(--gold-bright); font-weight:400;}
+  .hero-handle{
+    font-family:'Jost', sans-serif;
+    font-weight:300;
+    font-size:1.05rem;
+    letter-spacing:0.06em;
+    color:var(--beige);
+    margin-top:18px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .avatar{
+    width:52px; height:52px;
+    border-radius:50%;
+    object-fit:cover;
+    border:1.5px solid var(--gold);
+    padding:2px;
+  }
+  .hero-tagline{
+    margin-top:26px;
+    max-width:460px;
+    font-size:1.02rem;
+    line-height:1.75;
+    font-weight:300;
+    color:rgba(246,238,223,0.82);
+  }
+  .hero-cta{
+    margin-top:40px;
+    display:flex; gap:16px; flex-wrap:wrap;
+  }
+  .btn{
+    font-family:'Cinzel', serif;
+    font-size:0.68rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    padding:16px 30px;
+    border:1px solid var(--gold);
+    color:var(--gold-bright);
+    transition:all 0.35s ease;
+    display:inline-block;
+  }
+  .btn:hover{background:var(--gold); color:var(--chocolate-deep);}
+  .btn.filled{background:var(--gold); color:var(--chocolate-deep);}
+  .btn.filled:hover{background:var(--gold-bright); border-color:var(--gold-bright);}
+
+  .hero-image-wrap{
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-image-wrap img{
+    width:100%; height:100%;
+    object-fit:cover; object-position:center 18%;
+    filter:saturate(1.02) contrast(1.02);
+  }
+  .hero-image-wrap::after{
+    content:'';
+    position:absolute; inset:0;
+    background:linear-gradient(90deg, var(--chocolate) 0%, rgba(42,24,16,0) 22%, rgba(42,24,16,0) 100%);
+  }
+  .hero-image-wrap::before{
+    content:'';
+    position:absolute; inset:0;
+    background:linear-gradient(0deg, rgba(27,15,9,0.55) 0%, rgba(27,15,9,0) 40%);
+    z-index:2;
+  }
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-image-wrap{height:52vh; order:1;}
+    .hero-copy{order:2; padding-top:60px;}
+  }
+
+  .hero-seal{
+    position:absolute; top:100px; right:6vw; z-index:4;
+  }
+  @media (max-width:860px){ .hero-seal{display:none;} }
+
+  /* ================= SECTION SHELL ================= */
+  section{padding:120px 0;}
+  .section-head{
+    display:flex; align-items:center; gap:22px;
+    margin-bottom:56px;
+  }
+  .section-head h2{
+    font-size:clamp(1.9rem,3.4vw,2.7rem);
+    color:var(--chocolate);
+  }
+  .section-head .rule{flex:1; height:1px; background:var(--line);}
+  .section-kicker{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    color:var(--gold-dim);
+    font-size:1.05rem;
+    margin-top:6px;
+  }
+
+  .dark{background:var(--chocolate-deep); color:var(--cream-soft);}
+  .dark .section-head h2{color:var(--white);}
+  .dark .eyebrow{color:var(--gold-bright);}
+
+  /* ================= ABOUT ================= */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:start;
+  }
+  .about-lede{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.65rem;
+    line-height:1.5;
+    font-weight:400;
+    color:var(--chocolate);
+  }
+  .about-lede i{color:var(--gold-dim);}
+  .about-body p{
+    line-height:1.9;
+    color:var(--chocolate-soft);
+    margin-bottom:18px;
+    font-size:0.98rem;
+  }
+  .pillars{
+    display:flex; gap:16px; margin-top:30px; flex-wrap:wrap;
+  }
+  .pillar{
+    border:1px solid var(--gold);
+    padding:20px 24px;
+    flex:1; min-width:190px;
+  }
+  .pillar .eyebrow{margin-bottom:8px;}
+  .pillar h4{font-size:1.3rem; color:var(--chocolate);}
+  @media (max-width:800px){.about-grid{grid-template-columns:1fr;}}
+
+  /* ================= STATS ================= */
+  .stat-strip{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+  }
+  .stat-cell{
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:38px 28px;
+  }
+  .stat-cell .num{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.6rem;
+    color:var(--gold-bright);
+    line-height:1;
+  }
+  .stat-cell .label{
+    margin-top:10px;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    color:var(--beige);
+    text-transform:uppercase;
+  }
+  @media (max-width:800px){.stat-strip{grid-template-columns:repeat(2,1fr);}}
+
+  .stat-note{
+    margin-top:40px;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:1.15rem;
+    color:var(--beige);
+    max-width:640px;
+    line-height:1.6;
+  }
+
+  /* ================= AUDIENCE ================= */
+  .aud-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:70px;
+  }
+  .donut-wrap{display:flex; align-items:center; gap:36px;}
+  .donut{
+    width:180px; height:180px;
+    border-radius:50%;
+    background: conic-gradient(var(--gold) 0deg 222deg, var(--chocolate-soft) 222deg 360deg);
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    flex-shrink:0;
+  }
+  .donut::before{
+    content:'';
+    position:absolute;
+    width:120px; height:120px;
+    background:var(--cream);
+    border-radius:50%;
+  }
+  .donut .donut-label{
+    position:relative; z-index:2;
+    text-align:center;
+    font-family:'Cormorant Garamond',serif;
+  }
+  .donut .donut-label b{font-size:1.5rem; display:block; color:var(--chocolate);}
+  .donut .donut-label span{font-size:0.68rem; letter-spacing:0.1em; color:var(--gold-dim); text-transform:uppercase;}
+  .gender-key{font-size:0.95rem; color:var(--chocolate-soft); line-height:2.1;}
+  .gender-key .dot{display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:8px;}
+
+  .bar-row{margin-bottom:16px;}
+  .bar-row .top{display:flex; justify-content:space-between; font-size:0.85rem; color:var(--chocolate-soft); margin-bottom:6px;}
+  .bar-track{height:6px; background:rgba(74,47,31,0.12); position:relative;}
+  .bar-fill{height:100%; background:linear-gradient(90deg, var(--gold-dim), var(--gold-bright));}
+
+  .country-list{margin-top:34px;}
+  .country-row{display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--line); font-size:0.92rem; color:var(--chocolate-soft);}
+  .country-row b{color:var(--chocolate); font-weight:500;}
+
+  @media (max-width:800px){.aud-grid{grid-template-columns:1fr;} .donut-wrap{flex-direction:column; align-items:flex-start;}}
+
+  /* ================= WORK GRID (embeds) ================= */
+  .work-intro{max-width:620px; margin-bottom:50px;}
+  .work-intro p{color:var(--beige); line-height:1.85; font-size:0.98rem;}
+
+  .work-sequence{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+  }
+  .work-row{
+    display:grid;
+    grid-template-columns:70px 1fr 1.3fr;
+    gap:40px;
+    padding:48px 0;
+    border-bottom:1px solid var(--line);
+    align-items:center;
+  }
+  .work-row:first-child{padding-top:0;}
+  .work-meta{color:var(--chocolate);}
+  .work-meta .tag{font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-dim); font-family:'Cinzel',serif;}
+  .work-meta h3{font-size:1.9rem; margin-top:10px; color:var(--chocolate); font-weight:600;}
+  .work-meta p{margin-top:12px; font-size:0.9rem; line-height:1.7; color:var(--chocolate-soft); max-width:340px;}
+
+  /* dark sections (Brand Campaigns) need light text over the chocolate background */
+  .dark .work-meta{color:var(--cream-soft);}
+  .dark .work-meta .tag{color:var(--gold-bright);}
+  .dark .work-meta h3{color:var(--white);}
+  .dark .work-meta p{color:var(--beige);}
+  .embed-frame{
+    display:flex; justify-content:center;
+  }
+
+  /* self-contained preview card — no external script dependency */
+  .ig-card{
+    position:relative;
+    width:100%;
+    max-width:340px;
+    aspect-ratio:4/5;
+    display:flex; flex-direction:column; justify-content:space-between;
+    background:linear-gradient(155deg, var(--chocolate-soft) 0%, var(--chocolate-deep) 100%);
+    border:1px solid var(--gold-dim);
+    overflow:hidden;
+    padding:22px;
+    transition:transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+  .ig-card:hover{transform:translateY(-6px); border-color:var(--gold-bright); box-shadow:0 20px 40px rgba(27,15,9,0.25);}
+  .ig-card .monogram{
+    position:absolute; right:-14px; bottom:-38px;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:9.5rem;
+    color:rgba(230,199,131,0.09);
+    line-height:1;
+    pointer-events:none;
+    user-select:none;
+  }
+  .ig-card-top{
+    display:flex; justify-content:space-between; align-items:flex-start;
+    position:relative; z-index:2;
+  }
+  .ig-card-type{
+    font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--gold-bright); border:1px solid var(--gold-dim); padding:6px 11px;
+  }
+  .ig-card-icon{
+    width:20px; height:20px; opacity:0.8;
+  }
+  .ig-card-mid{
+    position:relative; z-index:2;
+    flex:1;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .ig-card-play{
+    width:56px; height:56px; border-radius:50%;
+    border:1px solid var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    transition:background 0.35s ease;
+  }
+  .ig-card:hover .ig-card-play{background:var(--gold);}
+  .ig-card-play svg{width:16px; height:16px;}
+  .ig-card-bottom{position:relative; z-index:2;}
+  .ig-card-brand{
+    font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:var(--white); margin-bottom:8px;
+  }
+  .ig-card-cta{
+    font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase;
+    color:var(--gold-bright); display:flex; align-items:center; gap:8px;
+  }
+  .ig-card-cta svg{width:11px; height:11px;}
+
+  @media (max-width:900px){
+    .ig-card{max-width:100%;}
+  }
+
+  /* ---------- featured / latest highlight ---------- */
+  .work-row.featured{
+    position:relative;
+    background:linear-gradient(90deg, rgba(230,199,131,0.07), transparent 60%);
+    border-left:2px solid var(--gold-bright);
+    padding-left:24px;
+    margin-left:-26px;
+  }
+  @media (max-width:900px){ .work-row.featured{margin-left:0; padding-left:18px;} }
+
+  .latest-ribbon{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--chocolate-deep);
+    background:linear-gradient(100deg, var(--gold-bright), var(--gold));
+    padding:7px 14px;
+    margin-bottom:14px;
+    box-shadow:0 4px 16px rgba(198,161,91,0.35);
+  }
+  .latest-ribbon::before{content:'★';}
+
+  .ig-card.featured{
+    border-color:var(--gold-bright);
+    box-shadow:0 0 0 1px var(--gold-bright), 0 20px 45px rgba(198,161,91,0.28);
+  }
+  .ig-card.featured .ig-card-play{background:var(--gold-bright);}
+
+  .video-player-frame{
+    position:relative;
+    border:1px solid var(--gold-bright);
+    box-shadow:0 0 0 1px var(--gold-bright), 0 20px 45px rgba(198,161,91,0.28);
+    padding:10px;
+    max-width:340px;
+    background:var(--chocolate-deep);
+  }
+  .video-player-frame video{
+    width:100%;
+    display:block;
+    aspect-ratio:9/16;
+    object-fit:cover;
+    background:#000;
+  }
+  .video-player-label{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-top:10px;
+    padding:0 2px;
+  }
+  .video-player-label b{font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold-bright);}
+  .video-player-label span{font-size:0.72rem; color:var(--beige);}
+  @media (max-width:900px){ .video-player-frame{max-width:100%;} }
+
+
+  /* ---------- native Instagram embed (plays in-page) ---------- */
+  .ig-embed-frame{
+    position:relative;
+    border:1px solid var(--gold-bright);
+    box-shadow:0 0 0 1px var(--gold-bright), 0 20px 45px rgba(198,161,91,0.28);
+    padding:10px;
+    max-width:340px;
+    background:var(--chocolate-deep);
+  }
+  .ig-embed-frame iframe{
+    width:100%;
+    height:620px;
+    display:block;
+    border:0;
+    background:#000;
+  }
+  @media (max-width:900px){ .ig-embed-frame{max-width:100%;} }
+
+
+  /* ---------- extra small screens ---------- */
+  @media (max-width:600px){
+    section{padding:76px 0;}
+    .stat-cell{padding:26px 18px;}
+    .stat-cell .num{font-size:2.1rem;}
+    .about-lede{font-size:1.35rem;}
+    .yt-panel{padding:34px 20px;}
+  }
+  @media (max-width:420px){
+    .hero-tagline{font-size:0.94rem;}
+    .btn{padding:14px 22px; font-size:0.62rem;}
+    .section-head{gap:14px;}
+    .nav-brand{font-size:0.68rem; letter-spacing:0.14em;}
+  }
+
+  @media (max-width:900px){
+    .work-row{grid-template-columns:1fr; gap:20px;}
+    .chapter-num{margin-bottom:6px;}
+  }
+
+  /* ================= YOUTUBE ================= */
+  .yt-panel{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    border:1px solid var(--gold);
+    padding:60px;
+  }
+  .yt-panel h3{font-size:2.2rem; color:var(--chocolate); margin-bottom:16px;}
+  .yt-panel p{color:var(--chocolate-soft); line-height:1.85; font-size:0.98rem; margin-bottom:26px;}
+  .yt-glyph{
+    display:flex; align-items:center; justify-content:center;
+  }
+  .yt-glyph svg{width:120px; height:120px;}
+  @media (max-width:800px){.yt-panel{grid-template-columns:1fr; padding:40px 26px; text-align:left;}}
+
+  /* ================= FOOTER / CONTACT ================= */
+  .contact{
+    text-align:center;
+    padding-bottom:140px;
+  }
+  .contact h2{
+    font-size:clamp(2.2rem,5vw,3.6rem);
+    color:var(--white);
+    max-width:760px;
+    margin:0 auto 30px;
+    line-height:1.15;
+  }
+  .contact h2 i{color:var(--gold-bright);}
+  .contact-btns{display:flex; gap:18px; justify-content:center; margin-top:38px; flex-wrap:wrap;}
+  .agency-line{margin-top:60px; color:var(--beige); font-size:0.85rem; letter-spacing:0.04em;}
+  .agency-line b{color:var(--gold-bright); font-weight:500;}
+
+  footer{
+    background:var(--chocolate-deep);
+    padding:34px 6vw;
+    display:flex; justify-content:space-between; align-items:center;
+    border-top:1px solid var(--line);
+    color:var(--gold-dim);
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+  }
+  footer a{color:var(--beige);}
+  @media (max-width:700px){footer{flex-direction:column; gap:10px; text-align:center;}}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="nav-brand"><img class="nav-avatar" src="resources/profile-pic.jpg" alt="Shubhangi">SHUBHANGI <em>· BEAUTY FULL SOUL</em></div>
+  <div class="nav-links">
+    <a href="#about">Profile</a>
+    <a href="#stats">Numbers</a>
+    <a href="#audience">Audience</a>
+    <a href="#work">Campaigns</a>
+    <a href="#storytelling">Storytelling</a>
+    <a href="#youtube">YouTube</a>
+    <a href="#contact">Collaborate</a>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Beauty &amp; Lifestyle Creator — Delhi NCR</div>
+      <h1 class="hero-name">Shubhangi<br><i>Beauty Full Soul</i></h1>
+      <div class="hero-handle"><img class="avatar" src="resources/profile-pic.jpg" alt="Shubhangi profile picture"> @beauty_full_soul05 on Instagram</div>
+      <p class="hero-tagline">Hinglish beauty storytelling for a generation that reads ingredient lists — from drugstore heroes to the luxury vanity edit. Real skin, real voice, real conversions.</p>
+      <div class="hero-cta">
+        <a class="btn filled" href="https://www.instagram.com/beauty_full_soul05" target="_blank" rel="noopener">View Instagram</a>
+        <a class="btn" href="#contact">Collaborate</a>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="resources/hero-portrait.jpg" alt="Shubhangi, creator of @beauty_full_soul05">
+    </div>
+  </div>
+  <div class="hero-seal"><div class="seal"><span>BFS</span></div></div>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="container reveal">
+    <div class="section-head">
+      <div class="chapter-num">I</div>
+      <div>
+        <h2>The Profile</h2>
+        <div class="section-kicker">Who's behind the feed</div>
+      </div>
+      <div class="rule"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-lede">
+        A Delhi NCR–based beauty &amp; lifestyle creator, telling honest beauty stories in Hinglish — <i>with a genuine, first-love pull toward luxury beauty houses and the quiet discipline of a considered skincare ritual.</i>
+      </div>
+      <div class="about-body">
+        <p>Shubhangi builds beauty and lifestyle content that speaks the way her audience actually talks — warm, candid, and unhurried. At the heart of her content instinct sits a real love for luxury beauty: the unboxing ritual, the ingredient story, the slow ten-step routine. Skincare, to her, is a daily ritual worth honouring properly, never a task to rush through.</p>
+        <p>That inclination toward premium beauty houses sits comfortably alongside an equally sincere drugstore instinct, so brands across the shelf — from mass favourites to maison names — find a genuine, well-cared-for home in her feed.</p>
+        <p>Three signature pillars anchor her storytelling and keep her audience returning, week over week.</p>
+        <div class="pillars">
+          <div class="pillar">
+            <div class="eyebrow">Pillar One</div>
+            <h4>Drugstore Darling</h4>
+          </div>
+          <div class="pillar">
+            <div class="eyebrow">Pillar Two</div>
+            <h4>Glam Diary</h4>
+          </div>
+          <div class="pillar">
+            <div class="eyebrow">Pillar Three</div>
+            <h4>Luxe Beauty &amp; Skincare Rituals</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section id="stats" class="dark">
+  <div class="container reveal">
+    <div class="section-head">
+      <div class="chapter-num" style="color:var(--gold-bright); border-color:var(--gold-bright);">II</div>
+      <div>
+        <h2>The Numbers</h2>
+        <div class="section-kicker" style="color:var(--gold-bright);" id="statsKicker">90-day performance snapshot — Jun 12 to Sep 10, 2026</div>
+      </div>
+      <div class="rule"></div>
+    </div>
+
+    <div class="stat-strip" id="statStrip">
+      <div class="stat-cell"><div class="num">10,498</div><div class="label">Followers</div></div>
+      <div class="stat-cell"><div class="num">11.1K</div><div class="label">Total Interactions</div></div>
+      <div class="stat-cell"><div class="num">2.4K</div><div class="label">Reel Views</div></div>
+      <div class="stat-cell"><div class="num">1.5K</div><div class="label">Unique Viewers</div></div>
+      <div class="stat-cell"><div class="num">11K</div><div class="label">Likes</div></div>
+      <div class="stat-cell"><div class="num">47</div><div class="label">Comments</div></div>
+      <div class="stat-cell"><div class="num">59</div><div class="label">Shares</div></div>
+      <div class="stat-cell"><div class="num">31</div><div class="label">Saves</div></div>
+    </div>
+
+    <p class="stat-note" id="statNote">Six reels over 90 days drove 11K likes alongside 47 comments, 59 shares, 28 reposts and 31 saves — engagement that runs well ahead of view volume, pointing to an audience that responds rather than scrolls past. Figures per Instagram account insights, Jun 12 – Sep 10, 2026.</p>
+  </div>
+</section>
+
+<!-- ================= AUDIENCE ================= -->
+<section id="audience">
+  <div class="container reveal">
+    <div class="section-head">
+      <div class="chapter-num">III</div>
+      <div>
+        <h2>The Audience</h2>
+        <div class="section-kicker">Who's watching, and from where</div>
+      </div>
+      <div class="rule"></div>
+    </div>
+
+    <div class="aud-grid">
+      <div>
+        <div class="eyebrow" style="margin-bottom:18px;">Gender Split</div>
+        <div class="donut-wrap">
+          <div class="donut" id="genderDonut">
+            <div class="donut-label"><b id="donutFollowers">10,498</b><span>Followers</span></div>
+          </div>
+          <div class="gender-key" id="genderKey">
+            <div><span class="dot" style="background:var(--gold);"></span>Men — 61.7%</div>
+            <div><span class="dot" style="background:var(--chocolate-soft);"></span>Women — 38.3%</div>
+          </div>
+        </div>
+
+        <div class="eyebrow" style="margin:44px 0 18px;">Top Markets</div>
+        <div class="country-list" id="countryList">
+          <div class="country-row"><span>India</span><b>35.0%</b></div>
+          <div class="country-row"><span>United States</span><b>9.4%</b></div>
+          <div class="country-row"><span>Vietnam</span><b>6.8%</b></div>
+          <div class="country-row"><span>Bangladesh</span><b>6.7%</b></div>
+          <div class="country-row"><span>Latvia</span><b>6.6%</b></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="eyebrow" style="margin-bottom:18px;">Age Range</div>
+        <div id="ageBars">
+        <div class="bar-row">
+          <div class="top"><span>25–34</span><span>35.6%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:35.6%;"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="top"><span>18–24</span><span>26.9%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:26.9%;"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="top"><span>35–44</span><span>14.3%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:14.3%;"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="top"><span>45–54</span><span>11.0%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:11.0%;"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="top"><span>13–17</span><span>5.6%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:5.6%;"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="top"><span>55–64</span><span>4.8%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:4.8%;"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="top"><span>65+</span><span>1.9%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:1.9%;"></div></div>
+        </div>
+        </div>
+        <p style="margin-top:28px; color:var(--chocolate-soft); font-size:0.92rem; line-height:1.8; max-width:420px;">
+          Over three-fifths of the audience sits in the 18–34 window — prime purchasing age for skincare discovery, first premium beauty buys, and impulse-driven haul content.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORK / CAMPAIGNS ================= -->
+<section id="work" class="dark">
+  <div class="container reveal">
+    <div class="section-head">
+      <div class="chapter-num" style="color:var(--gold-bright); border-color:var(--gold-bright);">IV</div>
+      <div>
+        <h2>Brand Campaigns</h2>
+        <div class="section-kicker" style="color:var(--gold-bright);">From the luxury edit to the drugstore darling</div>
+      </div>
+      <div class="rule"></div>
+    </div>
+
+    <div class="work-intro">
+      <p>A curated run of past collaborations — sequenced from premium boutique features down to the everyday hero product, showing range across price point, format, and brand voice.</p>
+    </div>
+
+    <div class="work-sequence">
+
+      <div class="work-row">
+        <div class="chapter-num">01</div>
+        <div class="work-meta">
+          <div class="tag">Luxury Haul</div>
+          <h3>Gucci Beauty, via Brandmall</h3>
+          <p>Premium unboxing and product edit sourced through Brandmall Delhi, positioning the page within the luxury beauty conversation.</p>
+        </div>
+        <div class="embed-frame">
+          <a class="ig-card" href="https://www.instagram.com/p/DYbDoU3jxRv/" target="_blank" rel="noopener" aria-label="Gucci Beauty · Brandmall — view on Instagram">
+            <span class="monogram">G</span>
+            <span class="ig-card-top">
+              <span class="ig-card-type">Post</span>
+              <svg class="ig-card-icon" viewBox="0 0 24 24" fill="none" stroke="#E7C783" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="#E7C783"/></svg>
+            </span>
+            <span class="ig-card-mid">
+              <span class="ig-card-play"><svg viewBox="0 0 16 16" fill="#E7C783"><path d="M4 2.5 L13 8 L4 13.5 Z"/></svg></span>
+            </span>
+            <span class="ig-card-bottom">
+              <span class="ig-card-brand">Gucci Beauty · Brandmall</span>
+              <span class="ig-card-cta">Watch on Instagram <svg viewBox="0 0 12 12" fill="none" stroke="#E7C783" stroke-width="1.3"><path d="M2 10 L10 2 M4 2 H10 V8"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="work-row">
+        <div class="chapter-num">02</div>
+        <div class="work-meta">
+          <div class="tag">Fine Jewelry</div>
+          <h3>Belleza Jewels</h3>
+          <p>Editorial-style feature carousel styling Belleza's pieces for an everyday-luxe look.</p>
+        </div>
+        <div class="embed-frame">
+          <a class="ig-card" href="https://www.instagram.com/p/DOofIFkkt0F/" target="_blank" rel="noopener" aria-label="Belleza Jewels — view on Instagram">
+            <span class="monogram">B</span>
+            <span class="ig-card-top">
+              <span class="ig-card-type">Post</span>
+              <svg class="ig-card-icon" viewBox="0 0 24 24" fill="none" stroke="#E7C783" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="#E7C783"/></svg>
+            </span>
+            <span class="ig-card-mid">
+              <span class="ig-card-play"><svg viewBox="0 0 16 16" fill="#E7C783"><path d="M4 2.5 L13 8 L4 13.5 Z"/></svg></span>
+            </span>
+            <span class="ig-card-bottom">
+              <span class="ig-card-brand">Belleza Jewels</span>
+              <span class="ig-card-cta">Watch on Instagram <svg viewBox="0 0 12 12" fill="none" stroke="#E7C783" stroke-width="1.3"><path d="M2 10 L10 2 M4 2 H10 V8"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="work-row">
+        <div class="chapter-num">03</div>
+        <div class="work-meta">
+          <div class="tag">PR Feature</div>
+          <h3>Youtaas Jewelry</h3>
+          <p>Gifted PR feature reel showcasing Youtaas' jewelry line with an on-brand styling narrative.</p>
+        </div>
+        <div class="embed-frame">
+          <a class="ig-card" href="https://www.instagram.com/reel/DQy6hcokjYi/" target="_blank" rel="noopener" aria-label="Youtaas Jewelry — view on Instagram">
+            <span class="monogram">Y</span>
+            <span class="ig-card-top">
+              <span class="ig-card-type">Reel</span>
+              <svg class="ig-card-icon" viewBox="0 0 24 24" fill="none" stroke="#E7C783" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="#E7C783"/></svg>
+            </span>
+            <span class="ig-card-mid">
+              <span class="ig-card-play"><svg viewBox="0 0 16 16" fill="#E7C783"><path d="M4 2.5 L13 8 L4 13.5 Z"/></svg></span>
+            </span>
+            <span class="ig-card-bottom">
+              <span class="ig-card-brand">Youtaas Jewelry</span>
+              <span class="ig-card-cta">Watch on Instagram <svg viewBox="0 0 12 12" fill="none" stroke="#E7C783" stroke-width="1.3"><path d="M2 10 L10 2 M4 2 H10 V8"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="work-row">
+        <div class="chapter-num">04</div>
+        <div class="work-meta">
+          <div class="tag">Unboxing</div>
+          <h3>Brandmall Delhi</h3>
+          <p>Full order unboxing built as an anticipation-driven reel — a format that consistently drives non-follower reach.</p>
+        </div>
+        <div class="embed-frame">
+          <a class="ig-card" href="https://www.instagram.com/reel/DY93-YkTAEK/" target="_blank" rel="noopener" aria-label="Brandmall Delhi — view on Instagram">
+            <span class="monogram">B</span>
+            <span class="ig-card-top">
+              <span class="ig-card-type">Reel</span>
+              <svg class="ig-card-icon" viewBox="0 0 24 24" fill="none" stroke="#E7C783" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="#E7C783"/></svg>
+            </span>
+            <span class="ig-card-mid">
+              <span class="ig-card-play"><svg viewBox="0 0 16 16" fill="#E7C783"><path d="M4 2.5 L13 8 L4 13.5 Z"/></svg></span>
+            </span>
+            <span class="ig-card-bottom">
+              <span class="ig-card-brand">Brandmall Delhi</span>
+              <span class="ig-card-cta">Watch on Instagram <svg viewBox="0 0 12 12" fill="none" stroke="#E7C783" stroke-width="1.3"><path d="M2 10 L10 2 M4 2 H10 V8"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="work-row">
+        <div class="chapter-num">05</div>
+        <div class="work-meta">
+          <div class="tag">Accessories</div>
+          <h3>Bhastra Bags</h3>
+          <p>Lifestyle feature integrating Bhastra's bag collection into an everyday outfit story.</p>
+        </div>
+        <div class="embed-frame">
+          <a class="ig-card" href="https://www.instagram.com/reel/DOQ8b5GE82J/" target="_blank" rel="noopener" aria-label="Bhastra Bags — view on Instagram">
+            <span class="monogram">B</span>
+            <span class="ig-card-top">
+              <span class="ig-card-type">Reel</span>
+              <svg class="ig-card-icon" viewBox="0 0 24 24" fill="none" stroke="#E7C783" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="#E7C783"/></svg>
+            </span>
+            <span class="ig-card-mid">
+              <span class="ig-card-play"><svg viewBox="0 0 16 16" fill="#E7C783"><path d="M4 2.5 L13 8 L4 13.5 Z"/></svg></span>
+            </span>
+            <span class="ig-card-bottom">
+              <span class="ig-card-brand">Bhastra Bags</span>
+              <span class="ig-card-cta">Watch on Instagram <svg viewBox="0 0 12 12" fill="none" stroke="#E7C783" stroke-width="1.3"><path d="M2 10 L10 2 M4 2 H10 V8"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="work-row featured">
+        <div class="chapter-num" style="border-color:var(--gold-bright); color:var(--gold-bright);">06</div>
+        <div class="work-meta">
+          <div class="latest-ribbon">Latest Reel</div>
+          <div class="tag">Drugstore Darling</div>
+          <h3>Pilgrim Vitamin C Moisturizer</h3>
+          <p>A "genuine restock" narrative for Pilgrim's Vitamin C Brightening Moisturizer — the format built to convert skeptics into buyers. The freshest campaign in the current rotation.</p>
+          <div class="video-player-label" style="max-width:340px; margin-top:16px;">
+            <b>Playing Inline</b><span>Original source file</span>
+          </div>
+        </div>
+        <div class="embed-frame">
+          <div>
+            <div class="video-player-frame">
+              <video controls preload="metadata" poster="resources/pilgrim-poster.jpg" playsinline>
+                <source src="resources/pilgrim-video.mp4" type="video/mp4">
+                Your browser does not support inline video playback.
+              </video>
+            </div>
+            <div style="text-align:center; margin-top:12px;">
+              <a href="https://www.instagram.com/reel/DayHrTaTSgk/" target="_blank" rel="noopener" style="font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold-bright);">View Original Reel on Instagram →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= STORYTELLING / UGC ================= -->
+<section id="storytelling">
+  <div class="container reveal">
+    <div class="section-head">
+      <div class="chapter-num">V</div>
+      <div>
+        <h2>Storytelling &amp; Voiceover</h2>
+        <div class="section-kicker">UGC built to hold attention, building toward the luxury climax</div>
+      </div>
+      <div class="rule"></div>
+    </div>
+
+    <div class="work-sequence">
+
+      <div class="work-row">
+        <div class="chapter-num">01</div>
+        <div class="work-meta">
+          <div class="tag">UGC · Voiceover</div>
+          <h3>Leosthetics</h3>
+          <p>Narrated skin-story format leading with a relatable problem before the reveal.</p>
+        </div>
+        <div class="embed-frame">
+          <a class="ig-card" href="https://www.instagram.com/reel/DXOOLhDilBT/" target="_blank" rel="noopener" aria-label="Leosthetics — view on Instagram">
+            <span class="monogram">L</span>
+            <span class="ig-card-top">
+              <span class="ig-card-type">Reel</span>
+              <svg class="ig-card-icon" viewBox="0 0 24 24" fill="none" stroke="#E7C783" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="#E7C783"/></svg>
+            </span>
+            <span class="ig-card-mid">
+              <span class="ig-card-play"><svg viewBox="0 0 16 16" fill="#E7C783"><path d="M4 2.5 L13 8 L4 13.5 Z"/></svg></span>
+            </span>
+            <span class="ig-card-bottom">
+              <span class="ig-card-brand">Leosthetics</span>
+              <span class="ig-card-cta">Watch on Instagram <svg viewBox="0 0 12 12" fill="none" stroke="#E7C783" stroke-width="1.3"><path d="M2 10 L10 2 M4 2 H10 V8"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="work-row">
+        <div class="chapter-num">02</div>
+        <div class="work-meta">
+          <div class="tag">UGC · Storytelling</div>
+          <h3>Youtaas</h3>
+          <p>Carousel-driven storytelling post pairing product detail with personal narrative.</p>
+        </div>
+        <div class="embed-frame">
+          <a class="ig-card" href="https://www.instagram.com/p/DQqwp0WElhY/" target="_blank" rel="noopener" aria-label="Youtaas — view on Instagram">
+            <span class="monogram">Y</span>
+            <span class="ig-card-top">
+              <span class="ig-card-type">Post</span>
+              <svg class="ig-card-icon" viewBox="0 0 24 24" fill="none" stroke="#E7C783" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="#E7C783"/></svg>
+            </span>
+            <span class="ig-card-mid">
+              <span class="ig-card-play"><svg viewBox="0 0 16 16" fill="#E7C783"><path d="M4 2.5 L13 8 L4 13.5 Z"/></svg></span>
+            </span>
+            <span class="ig-card-bottom">
+              <span class="ig-card-brand">Youtaas</span>
+              <span class="ig-card-cta">Watch on Instagram <svg viewBox="0 0 12 12" fill="none" stroke="#E7C783" stroke-width="1.3"><path d="M2 10 L10 2 M4 2 H10 V8"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="work-row">
+        <div class="chapter-num">03</div>
+        <div class="work-meta">
+          <div class="tag">UGC · Voiceover</div>
+          <h3>Kiko Milano</h3>
+          <p>Voiceover-led application demo, building trust through unscripted commentary.</p>
+        </div>
+        <div class="embed-frame">
+          <a class="ig-card" href="https://www.instagram.com/reel/DSftHHtkpSS/" target="_blank" rel="noopener" aria-label="Kiko Milano — view on Instagram">
+            <span class="monogram">K</span>
+            <span class="ig-card-top">
+              <span class="ig-card-type">Reel</span>
+              <svg class="ig-card-icon" viewBox="0 0 24 24" fill="none" stroke="#E7C783" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="#E7C783"/></svg>
+            </span>
+            <span class="ig-card-mid">
+              <span class="ig-card-play"><svg viewBox="0 0 16 16" fill="#E7C783"><path d="M4 2.5 L13 8 L4 13.5 Z"/></svg></span>
+            </span>
+            <span class="ig-card-bottom">
+              <span class="ig-card-brand">Kiko Milano</span>
+              <span class="ig-card-cta">Watch on Instagram <svg viewBox="0 0 12 12" fill="none" stroke="#E7C783" stroke-width="1.3"><path d="M2 10 L10 2 M4 2 H10 V8"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="work-row">
+        <div class="chapter-num">04</div>
+        <div class="work-meta">
+          <div class="tag">UGC · Voiceover</div>
+          <h3>Gucci Bronzer</h3>
+          <p>Premium GRWM-style voiceover reel positioning Gucci Beauty within an everyday routine.</p>
+        </div>
+        <div class="embed-frame">
+          <a class="ig-card" href="https://www.instagram.com/reel/DXpJ1RTE1r2/" target="_blank" rel="noopener" aria-label="Gucci Bronzer — view on Instagram">
+            <span class="monogram">G</span>
+            <span class="ig-card-top">
+              <span class="ig-card-type">Reel</span>
+              <svg class="ig-card-icon" viewBox="0 0 24 24" fill="none" stroke="#E7C783" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="#E7C783"/></svg>
+            </span>
+            <span class="ig-card-mid">
+              <span class="ig-card-play"><svg viewBox="0 0 16 16" fill="#E7C783"><path d="M4 2.5 L13 8 L4 13.5 Z"/></svg></span>
+            </span>
+            <span class="ig-card-bottom">
+              <span class="ig-card-brand">Gucci Bronzer</span>
+              <span class="ig-card-cta">Watch on Instagram <svg viewBox="0 0 12 12" fill="none" stroke="#E7C783" stroke-width="1.3"><path d="M2 10 L10 2 M4 2 H10 V8"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="work-row">
+        <div class="chapter-num">05</div>
+        <div class="work-meta">
+          <div class="tag">UGC · Luxury Climax</div>
+          <h3>Dior</h3>
+          <p>The closing piece of the storytelling arc — a Dior feature built with editorial pacing and voiceover restraint.</p>
+        </div>
+        <div class="embed-frame">
+          <a class="ig-card" href="https://www.instagram.com/reel/DOkFEs1EtdE/" target="_blank" rel="noopener" aria-label="Dior — view on Instagram">
+            <span class="monogram">D</span>
+            <span class="ig-card-top">
+              <span class="ig-card-type">Reel</span>
+              <svg class="ig-card-icon" viewBox="0 0 24 24" fill="none" stroke="#E7C783" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="#E7C783"/></svg>
+            </span>
+            <span class="ig-card-mid">
+              <span class="ig-card-play"><svg viewBox="0 0 16 16" fill="#E7C783"><path d="M4 2.5 L13 8 L4 13.5 Z"/></svg></span>
+            </span>
+            <span class="ig-card-bottom">
+              <span class="ig-card-brand">Dior</span>
+              <span class="ig-card-cta">Watch on Instagram <svg viewBox="0 0 12 12" fill="none" stroke="#E7C783" stroke-width="1.3"><path d="M2 10 L10 2 M4 2 H10 V8"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="work-row">
+        <div class="chapter-num">06</div>
+        <div class="work-meta">
+          <div class="tag">UGC · Skincare</div>
+          <h3>Medicube Gel Mask</h3>
+          <p>Kojic acid turmeric brightening gel mask, told as a before-and-after skin diary — the routine-led format that carries a K-beauty product into an everyday Indian skincare shelf.</p>
+          <div class="video-player-label" style="max-width:340px; margin-top:16px;">
+            <b>Playing Inline</b><span>Instagram embed</span>
+          </div>
+        </div>
+        <div class="embed-frame">
+          <div>
+            <div class="ig-embed-frame">
+              <iframe src="https://www.instagram.com/reel/DbFVCbZPtNV/embed/" title="Medicube Gel Mask reel on Instagram" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen scrolling="no" loading="lazy"></iframe>
+            </div>
+            <div style="text-align:center; margin-top:12px;">
+              <a href="https://www.instagram.com/reel/DbFVCbZPtNV/" target="_blank" rel="noopener" style="font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold-dim);">View Original Reel on Instagram →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= YOUTUBE ================= -->
+<section id="youtube" class="dark">
+  <div class="container reveal">
+    <div class="section-head">
+      <div class="chapter-num" style="color:var(--gold-bright); border-color:var(--gold-bright);">VI</div>
+      <div>
+        <h2>Also On YouTube</h2>
+        <div class="section-kicker" style="color:var(--gold-bright);">Long-form home for the same voice</div>
+      </div>
+      <div class="rule"></div>
+    </div>
+
+    <div class="yt-panel" style="background:rgba(255,253,248,0.03);">
+      <div>
+        <div class="eyebrow" style="color:var(--gold-bright); margin-bottom:14px;">@creative_er05</div>
+        <h3 style="color:var(--white);">Creative Er</h3>
+        <p style="color:var(--beige);">The extended-format counterpart to the Instagram feed — longer tutorials, deeper reviews, and behind-the-scenes creative process for the audience that wants more than sixty seconds.</p>
+        <a class="btn filled" href="https://youtube.com/@creative_er05" target="_blank" rel="noopener">Visit the Channel</a>
+      </div>
+      <div class="yt-glyph">
+        <svg viewBox="0 0 120 120" fill="none">
+          <circle cx="60" cy="60" r="58" stroke="#C6A15B" stroke-width="1"/>
+          <circle cx="60" cy="60" r="46" stroke="#C6A15B" stroke-width="1" opacity="0.5"/>
+          <path d="M50 42 L82 60 L50 78 Z" fill="#E7C783"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="dark contact">
+  <div class="container reveal">
+    <div class="eyebrow" style="justify-content:center; display:flex; margin-bottom:26px;">Let's Work Together</div>
+    <h2>For PR packages, gifted collaborations, and <i>paid partnerships</i> — reach out directly.</h2>
+    <div class="contact-btns">
+      <a class="btn filled" href="https://www.instagram.com/beauty_full_soul05" target="_blank" rel="noopener">Message on Instagram</a>
+      <a class="btn" href="https://wa.me/919266321465" target="_blank" rel="noopener">WhatsApp: +91 92663 21465</a>
+      <a class="btn" href="https://youtube.com/@creative_er05" target="_blank" rel="noopener">YouTube Channel</a>
+    </div>
+    <div class="agency-line">Collab enquiries welcome on WhatsApp at <b>+91 92663 21465</b></div>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Shubhangi — Beauty Full Soul. Media Kit.</div>
+  <div><a href="https://www.instagram.com/beauty_full_soul05" target="_blank" rel="noopener">instagram.com/beauty_full_soul05</a> &nbsp;·&nbsp; <a href="https://youtube.com/@creative_er05" target="_blank" rel="noopener">youtube.com/@creative_er05</a> &nbsp;·&nbsp; <a href="https://wa.me/919266321465" target="_blank" rel="noopener">WhatsApp +91 92663 21465</a></div>
+</footer>
+
+<script>
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
+</script>
+
+<!-- ============ dynamic stats: parsed from the Instagram insights PDF ============ -->
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script>
+/*
+ * Reads resources/insights/Account insights for beauty_full_soul05.pdf at page load,
+ * extracts the account metrics from its text layer, and renders the Numbers and
+ * Audience sections from them. Drop a newer export in at the same path and the page
+ * picks up the new figures with no markup edits.
+ *
+ * The values already in the HTML are the last-known export and stay on screen if the
+ * PDF is missing or unreadable (e.g. opening index.html over file:// , where fetch is
+ * blocked — serve the folder over http:// to see live parsing).
+ */
+(function(){
+  var PDF_CANDIDATES = [
+    'resources/insights/Account insights for beauty_full_soul05.pdf'
+  ];
+
+  function num(raw){
+    if(raw == null) return null;
+    var v = String(raw).trim().replace(/,/g,'');
+    var m = v.match(/^([\d.]+)\s*([KM])?$/i);
+    if(!m) return null;
+    var n = parseFloat(m[1]);
+    if(!isFinite(n)) return null;
+    if(m[2]) n *= (m[2].toUpperCase() === 'M' ? 1e6 : 1e3);
+    return n;
+  }
+
+  function fmt(n){
+    if(n == null) return '—';
+    if(n >= 1e6) return (n/1e6).toFixed(1).replace(/\.0$/,'') + 'M';
+    if(n >= 1e4) return (n/1e3).toFixed(1).replace(/\.0$/,'') + 'K';
+    return Math.round(n).toLocaleString('en-US');
+  }
+
+  function metric(text, label){
+    var re = new RegExp(label.replace(/ /g,'\\s+') + '\\s+([\\d.,]+\\s*[KM]?)(?![%\\d])', 'i');
+    var m = text.match(re);
+    return m ? {n:num(m[1]), raw:m[1].replace(/\s+/g,'')} : null;
+  }
+
+  function parse(text){
+    var t = text.replace(/\s+/g,' ');
+    var d = {};
+
+    var f = t.match(/([\d][\d,]{2,})\s*followers/i) || t.match(/([\d.]+\s*[KM])\s*followers/i);
+    d.followers = f ? num(f[1]) : null;
+    d.followersLabel = f && /,/.test(f[1]) ? f[1] : fmt(d.followers);
+
+    d.raw = {};
+    ['Reel views','Viewers','Likes','Comments','Reposts','Shares','Saves','Reels'].forEach(function(k){
+      var hit = metric(t, k);
+      d[k] = hit ? hit.n : null;
+      if(hit) d.raw[k] = hit.raw;   // keep the PDF's own rounding, e.g. "2.4K"
+    });
+
+    var range = t.match(/([A-Z][a-z]{2}\s+\d{1,2}\s*[-–]\s*[A-Z][a-z]{2}\s+\d{1,2},\s*\d{4})/);
+    d.range = range ? range[1].replace(/\s*[-–]\s*/,' – ') : null;
+    var days = t.match(/(\d+)\s*days/i);
+    d.days = days ? days[1] : null;
+
+    var w = t.match(/([\d.]+)%\s*Women/i), m = t.match(/([\d.]+)%\s*Men/i);
+    d.women = w ? parseFloat(w[1]) : null;
+    d.men   = m ? parseFloat(m[1]) : null;
+
+    d.ages = [];
+    var ageRe = /\b(13-17|18-24|25-34|35-44|45-54|55-64|65\+)\s+([\d.]+)%/g, a;
+    while((a = ageRe.exec(t)) !== null){
+      if(!d.ages.some(function(x){ return x.label === a[1]; })) d.ages.push({label:a[1], pct:parseFloat(a[2])});
+    }
+
+    function ranked(heading, stopAt){
+      var from = t.search(new RegExp(heading,'i'));
+      if(from < 0) return [];
+      var slice = t.slice(from + heading.length);
+      if(stopAt){
+        var stop = slice.search(new RegExp(stopAt,'i'));
+        if(stop > 0) slice = slice.slice(0, stop);
+      }
+      var out = [], re = /\d\.\s*([A-Za-z][A-Za-z .'’-]*?)\s+([\d.]+)%/g, r;
+      while((r = re.exec(slice)) !== null) out.push({name:r[1].trim(), pct:parseFloat(r[2])});
+      return out;
+    }
+    d.countries = ranked('Top countries','Top cities');
+    d.cities    = ranked('Top cities','Exported from');
+
+    return d;
+  }
+
+  // prefer the abbreviation printed in the PDF ("2.4K") over re-deriving one
+  function shown(d, key){ return d.raw[key] || fmt(d[key]); }
+
+  function esc(v){ return String(v).replace(/[&<>]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; }); }
+
+  function render(d){
+    if(d.followers == null) return false;   // nothing usable — keep the static figures
+
+    var interactions = ['Likes','Comments','Reposts','Shares','Saves']
+      .reduce(function(sum,k){ return d[k] == null ? sum : sum + d[k]; }, 0);
+
+    var cells = [
+      ['Followers',          d.followersLabel],
+      ['Total Interactions', interactions ? fmt(interactions) : null],
+      ['Reel Views',         shown(d,'Reel views')],
+      ['Unique Viewers',     shown(d,'Viewers')],
+      ['Likes',              shown(d,'Likes')],
+      ['Comments',           shown(d,'Comments')],
+      ['Shares',             shown(d,'Shares')],
+      ['Saves',              shown(d,'Saves')]
+    ].filter(function(c){ return c[1] && c[1] !== '—'; });
+
+    var strip = document.getElementById('statStrip');
+    if(strip) strip.innerHTML = cells.map(function(c){
+      return '<div class="stat-cell"><div class="num">' + esc(c[1]) + '</div><div class="label">' + esc(c[0]) + '</div></div>';
+    }).join('');
+
+    var kicker = document.getElementById('statsKicker');
+    if(kicker && d.range) kicker.textContent = (d.days ? d.days + '-day' : '90-day') + ' performance snapshot — ' + d.range;
+
+    var note = document.getElementById('statNote');
+    if(note){
+      var bits = [];
+      ['Comments','Shares','Reposts','Saves'].forEach(function(k){
+        if(d[k] != null) bits.push(shown(d, k) + ' ' + k.toLowerCase());
+      });
+      note.textContent =
+        (d.Reels != null ? shown(d,'Reels') + ' reels' : 'Reels') +
+        (d.days ? ' over ' + d.days + ' days' : '') +
+        ' drove ' + shown(d,'Likes') + ' likes' +
+        (bits.length ? ' alongside ' + bits.join(', ').replace(/, ([^,]*)$/, ' and $1') : '') +
+        ' — engagement that runs well ahead of view volume, pointing to an audience that responds rather than scrolls past.' +
+        (d.range ? ' Figures per Instagram account insights, ' + d.range + '.' : '');
+    }
+
+    var donutCount = document.getElementById('donutFollowers');
+    if(donutCount) donutCount.textContent = d.followersLabel;
+
+    if(d.men != null && d.women != null){
+      var donut = document.getElementById('genderDonut');
+      if(donut){
+        var deg = (d.men / 100 * 360).toFixed(1);
+        donut.style.background = 'conic-gradient(var(--gold) 0deg ' + deg + 'deg, var(--chocolate-soft) ' + deg + 'deg 360deg)';
+      }
+      var key = document.getElementById('genderKey');
+      if(key) key.innerHTML =
+        '<div><span class="dot" style="background:var(--gold);"></span>Men — ' + d.men + '%</div>' +
+        '<div><span class="dot" style="background:var(--chocolate-soft);"></span>Women — ' + d.women + '%</div>';
+    }
+
+    if(d.countries.length){
+      var list = document.getElementById('countryList');
+      if(list) list.innerHTML = d.countries.slice(0,5).map(function(c){
+        return '<div class="country-row"><span>' + esc(c.name) + '</span><b>' + c.pct.toFixed(1) + '%</b></div>';
+      }).join('');
+    }
+
+    if(d.ages.length){
+      var bars = document.getElementById('ageBars');
+      if(bars) bars.innerHTML = d.ages.slice().sort(function(a,b){ return b.pct - a.pct; }).map(function(a){
+        var label = a.label.replace('-','–');
+        return '<div class="bar-row">' +
+                 '<div class="top"><span>' + esc(label) + '</span><span>' + a.pct.toFixed(1) + '%</span></div>' +
+                 '<div class="bar-track"><div class="bar-fill" style="width:' + a.pct + '%;"></div></div>' +
+               '</div>';
+      }).join('');
+    }
+
+    return true;
+  }
+
+  async function textOf(url){
+    var res = await fetch(encodeURI(url));
+    if(!res.ok) throw new Error(res.status + ' for ' + url);
+    var data = await res.arrayBuffer();
+    var pdf = await pdfjsLib.getDocument({data:data}).promise;
+    var out = '';
+    for(var i = 1; i <= pdf.numPages; i++){
+      var page = await pdf.getPage(i);
+      var content = await page.getTextContent();
+      out += content.items.map(function(it){ return it.str; }).join(' ') + '\n';
+    }
+    return out;
+  }
+
+  async function load(){
+    if(typeof pdfjsLib === 'undefined'){ console.warn('[insights] pdf.js unavailable — showing last-known figures'); return; }
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+    for(var i = 0; i < PDF_CANDIDATES.length; i++){
+      try{
+        var parsed = parse(await textOf(PDF_CANDIDATES[i]));
+        if(render(parsed)){ console.info('[insights] stats loaded from', PDF_CANDIDATES[i]); return; }
+        console.warn('[insights] could not read metrics out of', PDF_CANDIDATES[i]);
+      }catch(err){
+        console.warn('[insights]', err.message);
+      }
+    }
+    console.warn('[insights] showing last-known figures from the markup');
+  }
+
+  load();
+})();
+</script>
+
+</body>
+</html>
